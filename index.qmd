@@ -8,7 +8,7 @@ about:
   
   links:
     - icon: linkedin
-      text: LinkedIn
+      text: LinkedIn 
       href: https://linkedin.com
     - icon: instagram
       text: Instagram
