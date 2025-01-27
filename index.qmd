@@ -1,6 +1,6 @@
 ---
-title: "YOUR NAME" 
-about:
+title: "Ethan Whitehead" 
+about: 
   template: trestles  # jolla  trestles  solana  marquee  broadside
   image: img/profile.png
   image-width: 16em
@@ -9,34 +9,33 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn 
-      href: https://linkedin.com
+      href: https://linkedin.com/in/ethanwhitehead/
     - icon: instagram
       text: Instagram
       href: https://instagram.com
     - icon: github
       text: GitHub
-      href: https://github.com
+      href: https://github.com/Ethan-W-Geneseo 
     - icon: file-earmark-pdf
       text: Resumé
       href: resume-example.pdf
       target: _blank
     - icon: mailbox
       text: Email
-      href: mailto:YOUR_EMAIL@geneseo.edu
+      href: mailto:ejw100@geneseo.edu
 
 ---
 
 
-Finley Malloc majors in Data Analytics at SUNY Geneseo. When not working on data analytics, Finley enjoys spending time unicycling and playing with her pet iguana.
+Ethan Whitehead is enrolled in a B.S. in Finance and a B.A. in Economics at SUNY Geneseo.
 
 ## Education
 
 State University of New York at Geneseo | Geneseo, NY <br>
-B.S. in Data Analytics | Aug 2022 - May 2026 <br>
-Minor in Economics
+B.S. in Finance, B.A. in Economics | Aug 2021 - May 2025 <br>
 
 ## Experience
 
-Starbucks Analytics | Data Analyst Intern | May 2024 - Aug 2024
+Utica National Insurance Group | Enterprise Transformation Intern | May 2024 - Aug 2024
 
 
