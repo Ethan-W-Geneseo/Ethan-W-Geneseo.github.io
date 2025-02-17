@@ -1,5 +1,5 @@
 ---
-title: "Ethan Whitehead" 
+title: "Ethan Whitehead"
 about: 
   template: trestles  # jolla  trestles  solana  marquee  broadside
   image: img/E_Whitehead_PFP.jpg
