@@ -1,0 +1,17 @@
+---
+title: "Ethan's Lecture 3 Post"
+author: "Ethan W."
+date: 2025-02-16
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+# The Basic Geom Functions
+
+- Bar charts use geom_bar();
+- Line charts use geom_line();
+- Boxplots use the geom_boxplot();
+- Scatterplots use the geom_point();
+- Fitted lines use the geom_smooth()
+
+

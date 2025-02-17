@@ -1,9 +1,9 @@
 project: 
   type: website
-  output-dir: "." 
+  output-dir: docs 
 
 website:
-  title: "YOUR NAME"
+  title: "Ethan Whitehead"
   navbar:
     # background: "#1c4982"
     pinned: true
@@ -12,7 +12,7 @@ website:
         href: blog-listing.qmd
             
   page-footer: 
-    center: "Powered with GitHub, Quarto, and Jupyter Notebook<br>© YOUR NAME, 2025"
+    center: "Powered with GitHub, Quarto, and Jupyter Notebook<br>© Ethan Whitehead, 2025"
 
 format:
   html:
