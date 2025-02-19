@@ -37,7 +37,7 @@ ggplot(data =dataframe) +
 ```{r}
 ggplot(data = dataframe) + 
   geom_point(mapping = 
-               aes(x = x_var , 
+               aes(x = x_var,
                    y = y_var,
                    shape = cat_var)
     ###can be done with color, alpha, and size too         
@@ -59,6 +59,23 @@ ggplot(data = mpg,
                aes(color = class),
                 )
 ```
+
+#Lecture 4
+
+- ggthemes and hrbr themes package
+- Its possible to use different aesthetic mappings
+- ggsave() can be used to save a output, 
+--ie. ggsave("name.pdf, plot = object)
+
+#Classwork 4:
+
+- WHen you do the cat variable = (shape,color,etc.) in the ggplot itself it will apply it to both items. When you want it for just one, just do it for that specific geom_*
+-- It still needs to be in the aes() for both scenarios
+- You can control whether the legend is there with show.legend. 
+- You can merge two dataframes by using binding. Left bind puts higher precedence on the left dataframe. 
+
+
+
 
 
 
