@@ -10,9 +10,6 @@ about:
     - icon: linkedin
       text: LinkedIn 
       href: https://linkedin.com/in/ethanwhitehead/
-    - icon: instagram
-      text: Instagram
-      href: https://instagram.com
     - icon: github
       text: GitHub
       href: https://github.com/Ethan-W-Geneseo 

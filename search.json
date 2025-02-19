@@ -46,7 +46,7 @@
     "href": "posts/ggplot-basics/index.html",
     "title": "Ethan’s Lecture 3 Post",
     "section": "",
-    "text": "The Basic Geom Functions\n\nBar charts use geom_bar();\nLine charts use geom_line();\nBoxplots use the geom_boxplot();\nScatterplots use the geom_point();\nFitted lines use the geom_smooth()"
+    "text": "The Basic Geom Functions\n\nBar charts use geom_bar();\nLine charts use geom_line();\nBoxplots use the geom_boxplot();\nScatterplots use the geom_point();\nFitted lines use the geom_smooth()\n\n#Geom Grammar"
   },
   {
     "objectID": "posts/starwars/starwars_df.html",
