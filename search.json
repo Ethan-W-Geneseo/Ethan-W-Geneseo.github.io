@@ -39,14 +39,28 @@
     "href": "blog-listing.html",
     "title": "Insightful Analytics",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nEthan’s Lecture 3 Post\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\nEthan W.\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYOUR NAME\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nStarwars\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYour Name\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYOUR NAME\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nEthan’s Summary Post\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\nEthan W.\n\n\n2 min\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYOUR NAME\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nStarwars\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYour Name\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYOUR NAME\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/ggplot-basics/index.html",
     "href": "posts/ggplot-basics/index.html",
-    "title": "Ethan’s Lecture 3 Post",
+    "title": "Ethan’s Summary Post",
     "section": "",
-    "text": "The Basic Geom Functions\n\nBar charts use geom_bar();\nLine charts use geom_line();\nBoxplots use the geom_boxplot();\nScatterplots use the geom_point();\nFitted lines use the geom_smooth()\n\n#Geom Grammar"
+    "text": "Bar charts use geom_bar();\nLine charts use geom_line();\nBoxplots use the geom_boxplot();\nScatterplots use the geom_point();\nFitted lines use the geom_smooth()\n\n\n\n\n\n\nggplot(data =dataframe) + \n  geom_point(mapping = \n               aes(x = x_var , \n                   y = y_var,) )+\n  facet_wrap( ~ cat_var, row ~ column)\n\n\n\nggplot(data = dataframe) + \n  geom_point(mapping = \n               aes(x = x_var,\n                   y = y_var,\n                   shape = cat_var)\n          \nNote: This can be done with color, alpha, and size too"
+  },
+  {
+    "objectID": "posts/ggplot-basics/index.html#the-basic-geom-functions",
+    "href": "posts/ggplot-basics/index.html#the-basic-geom-functions",
+    "title": "Ethan’s Summary Post",
+    "section": "",
+    "text": "Bar charts use geom_bar();\nLine charts use geom_line();\nBoxplots use the geom_boxplot();\nScatterplots use the geom_point();\nFitted lines use the geom_smooth()"
+  },
+  {
+    "objectID": "posts/ggplot-basics/index.html#differentiation-of-categoricals",
+    "href": "posts/ggplot-basics/index.html#differentiation-of-categoricals",
+    "title": "Ethan’s Summary Post",
+    "section": "",
+    "text": "ggplot(data =dataframe) + \n  geom_point(mapping = \n               aes(x = x_var , \n                   y = y_var,) )+\n  facet_wrap( ~ cat_var, row ~ column)\n\n\n\nggplot(data = dataframe) + \n  geom_point(mapping = \n               aes(x = x_var,\n                   y = y_var,\n                   shape = cat_var)\n          \nNote: This can be done with color, alpha, and size too"
   },
   {
     "objectID": "posts/starwars/starwars_df.html",

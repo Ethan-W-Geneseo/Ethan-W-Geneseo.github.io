@@ -1,12 +1,12 @@
 ---
-title: "Ethan's Lecture 3 Post"
+title: "Ethan's Summary Post"
 author: "Ethan W."
 date: 2025-02-16
 categories: [news, code, analysis]
-image: "image.jpg"
 ---
+# Lecture 3: Essential Geom Grammar
 
-##The Basic Geom Functions
+## The Basic Geom Functions
 
 - Bar charts use geom_bar();
 - Line charts use geom_line();
@@ -15,64 +15,55 @@ image: "image.jpg"
 - Fitted lines use the geom_smooth()
 
 
-#Essential Geom Grammar
 
-##Differentiation of categoricals
 
-###Facet Wrap
-- 
-```{r}
+## Differentiation of categoricals
+
+### Facet Wrap
+
+```
 ggplot(data =dataframe) + 
   geom_point(mapping = 
                aes(x = x_var , 
                    y = y_var,) )+
   facet_wrap( ~ cat_var, row ~ column)
-
 ```
-
-
-
-
-
-```{r}
+### Making points differ based on categoricals
+```
 ggplot(data = dataframe) + 
   geom_point(mapping = 
                aes(x = x_var,
                    y = y_var,
                    shape = cat_var)
-    ###can be done with color, alpha, and size too         
+          
 ```
+ Note: This can be done with color, alpha, and size too  
 
 
-###The shapes of r 
+# Filtering Categoricals
 
-image: "r shapes.jpg"
-
-#Filtering Categoricals
-
-```{r}
+```
 ggplot(data = mpg,
        mapping = 
          aes(x = x_var,
              y = y_var))+
   geom_point(mapping =
-               aes(color = class),
-                )
+               aes(color = class))
 ```
 
-#Lecture 4
+# Lecture 4
 
-- ggthemes and hrbr themes package
-- Its possible to use different aesthetic mappings
-- ggsave() can be used to save a output, 
---ie. ggsave("name.pdf, plot = object)
+1. ggthemes and hrbr themes package
+2. Its possible to use different aesthetic mappings
+3. ggsave() can be used to save a output, 
+4. ie. ggsave("name.pdf, plot = object)
 
-#Classwork 4:
+# Classwork 4:
 
-- WHen you do the cat variable = (shape,color,etc.) in the ggplot itself it will apply it to both items. When you want it for just one, just do it for that specific geom_*
--- It still needs to be in the aes() for both scenarios
-- You can control whether the legend is there with show.legend. 
-- You can merge two dataframes by using binding. Left bind puts higher precedence on the left dataframe. 
+1. When you do the cat variable = (shape,color,etc.) in the ggplot itself it will apply it to both items. When you want it for just one, just do it for that specific geom_*
+2. It still needs to be in the aes() for both scenarios
+3. You can control whether the legend is there with show.legend. 
+4. You can merge two dataframes by using binding. Left bind puts higher precedence on the left dataframe. 
 
 
 

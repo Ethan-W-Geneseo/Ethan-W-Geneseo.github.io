@@ -9,7 +9,7 @@
 <meta name="author" content="Ethan W.">
 <meta name="dcterms.date" content="2025-02-16">
 
-<title>Ethan’s Lecture 3 Post – Ethan Whitehead</title>
+<title>Ethan’s Summary Post – Ethan Whitehead</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Ethan’s Lecture 3 Post</h1>
+      <h1 class="title">Ethan’s Summary Post</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">news</div>
                 <div class="quarto-category">code</div>
@@ -148,8 +148,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="the-basic-geom-functions" class="level1">
-<h1>The Basic Geom Functions</h1>
+<section id="essential-geom-grammar" class="level1">
+<h1>Essential Geom Grammar</h1>
+<section id="the-basic-geom-functions" class="level2">
+<h2 class="anchored" data-anchor-id="the-basic-geom-functions">The Basic Geom Functions</h2>
 <ul>
 <li>Bar charts use geom_bar();</li>
 <li>Line charts use geom_line();</li>
@@ -157,7 +159,55 @@ ul.task-list li input[type="checkbox"] {
 <li>Scatterplots use the geom_point();</li>
 <li>Fitted lines use the geom_smooth()</li>
 </ul>
-<p>#Geom Grammar</p>
+</section>
+<section id="differentiation-of-categoricals" class="level2">
+<h2 class="anchored" data-anchor-id="differentiation-of-categoricals">Differentiation of categoricals</h2>
+<section id="facet-wrap" class="level3">
+<h3 class="anchored" data-anchor-id="facet-wrap">Facet Wrap</h3>
+<pre><code>ggplot(data =dataframe) + 
+  geom_point(mapping = 
+               aes(x = x_var , 
+                   y = y_var,) )+
+  facet_wrap( ~ cat_var, row ~ column)</code></pre>
+</section>
+<section id="making-points-differ-based-on-categoricals" class="level3">
+<h3 class="anchored" data-anchor-id="making-points-differ-based-on-categoricals">Making points differ based on categoricals</h3>
+<pre><code>ggplot(data = dataframe) + 
+  geom_point(mapping = 
+               aes(x = x_var,
+                   y = y_var,
+                   shape = cat_var)
+          </code></pre>
+<p>Note: This can be done with color, alpha, and size too</p>
+</section>
+</section>
+</section>
+<section id="filtering-categoricals" class="level1">
+<h1>Filtering Categoricals</h1>
+<pre><code>ggplot(data = mpg,
+       mapping = 
+         aes(x = x_var,
+             y = y_var))+
+  geom_point(mapping =
+               aes(color = class))</code></pre>
+</section>
+<section id="lecture-4" class="level1">
+<h1>Lecture 4</h1>
+<ol type="1">
+<li>ggthemes and hrbr themes package</li>
+<li>Its possible to use different aesthetic mappings</li>
+<li>ggsave() can be used to save a output,</li>
+<li>ie. ggsave(“name.pdf, plot = object)</li>
+</ol>
+</section>
+<section id="classwork-4" class="level1">
+<h1>Classwork 4:</h1>
+<ol type="1">
+<li>When you do the cat variable = (shape,color,etc.) in the ggplot itself it will apply it to both items. When you want it for just one, just do it for that specific geom_*</li>
+<li>It still needs to be in the aes() for both scenarios</li>
+<li>You can control whether the legend is there with show.legend.</li>
+<li>You can merge two dataframes by using binding. Left bind puts higher precedence on the left dataframe.</li>
+</ol>
 
 
 </section>
