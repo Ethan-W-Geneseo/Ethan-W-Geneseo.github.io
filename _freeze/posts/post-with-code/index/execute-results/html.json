@@ -1,0 +1,15 @@
+{
+  "hash": "99baa88234c3b3b4b3b971753237e2d7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Ethan's Coding Posts\"\nauthor: \"Ethan W.\"\ndate: 2025-02-16\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\n\n\nThis is a post with executable code with no space in the folder name.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(\"Hello World\")\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"Hello World\"\n```\n\n\n:::\n:::\n\n\n\n![](image.jpg)",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

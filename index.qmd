@@ -1,0 +1,35 @@
+---
+title: "Ethan Whitehead"
+about: 
+  template: trestles  # jolla  trestles  solana  marquee  broadside
+  image: img/E_Whitehead_PFP.jpg
+  image-width: 16em
+  image-shape: rounded # rectangle  round  rounded
+  
+  links:
+    - icon: linkedin
+      text: LinkedIn 
+      href: https://linkedin.com/in/ethanwhitehead/
+    - icon: github
+      text: GitHub
+      href: https://github.com/Ethan-W-Geneseo 
+    - icon: file-earmark-pdf
+      text: Resumé
+      href: Ethan Whitehead Resume 02-16-2025.pdf
+      target: _blank
+    - icon: mailbox
+      text: Email
+      href: mailto:ejw100@geneseo.edu
+---
+
+Ethan Whitehead is enrolled in a B.S. in Finance and a B.A. in Economics at SUNY Geneseo.
+
+## Education
+
+State University of New York at Geneseo \| Geneseo, NY <br> B.S. in Finance, B.A. in Economics \| Aug 2021 - May 2025 <br>
+
+## Experience
+
+Utica National Insurance Group \| Enterprise Transformation Intern \| May 2024 - Aug 2024
+
+Baird Private Wealth Management \| Temporary Associate \| May 2023 - Aug 2023

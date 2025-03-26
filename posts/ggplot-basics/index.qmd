@@ -1,0 +1,72 @@
+---
+title: "Ethan's Summary Post"
+author: "Ethan W."
+date: 2025-02-16
+categories: [ code, analysis]
+---
+# Lecture 3: Essential Geom Grammar
+
+## The Basic Geom Functions
+
+- Bar charts use geom_bar();
+- Line charts use geom_line();
+- Boxplots use the geom_boxplot();
+- Scatterplots use the geom_point();
+- Fitted lines use the geom_smooth()
+
+
+
+
+## Differentiation of categoricals
+
+### Facet Wrap
+
+```
+ggplot(data =dataframe) + 
+  geom_point(mapping = 
+               aes(x = x_var , 
+                   y = y_var,) )+
+  facet_wrap( ~ cat_var, row ~ column) 
+```
+### Making points differ based on categoricals
+```
+ggplot(data = dataframe) + 
+  geom_point(mapping = 
+               aes(x = x_var,
+                   y = y_var,
+                   shape = cat_var)
+          
+```
+ Note: This can be done with color, alpha, and size too  
+
+
+# Filtering Categoricals
+
+```
+ggplot(data = mpg,
+       mapping = 
+         aes(x = x_var,
+             y = y_var))+
+  geom_point(mapping =
+               aes(color = class))
+```
+
+# Lecture 4
+
+1. ggthemes and hrbr themes package
+2. Its possible to use different aesthetic mappings
+3. ggsave() can be used to save a output, 
+4. ie. ggsave("name.pdf, plot = object)
+
+# Classwork 4:
+
+1. When you do the cat variable = (shape,color,etc.) in the ggplot itself it will apply it to both items. When you want it for just one, just do it for that specific geom_*
+2. It still needs to be in the aes() for both scenarios
+3. You can control whether the legend is there with show.legend. 
+4. You can merge two dataframes by using binding. Left bind puts higher precedence on the left dataframe. 
+
+
+
+
+
+

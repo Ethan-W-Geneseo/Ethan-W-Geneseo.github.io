@@ -1,0 +1,145 @@
+---
+title: "Ethan's Ben Jerry Post"
+author: "Ethan W."
+date: 2025-03-22
+categories: [code, analysis]
+---
+
+# Analyzing Ben & Jerry Data
+
+## Preparing the Libraries and data set
+
+```{r}
+library(tidyverse)
+library(ggtext)
+library(scales)
+library(xfun)
+library(ggplot2)
+library(ggrepel)
+library(ggtext)
+library(showtext)
+library(readr)
+library(dplyr)
+
+benjerry <- read_csv('https://bcdanl.github.io/data/ben-and-jerry-cleaned.csv')
+
+
+```
+
+## Assessing what regions use coupons the most
+```{r}
+
+View(benjerry)
+
+benjerry <- benjerry |>
+  mutate(
+    used_coupon = usecoup == TRUE,
+    income_group = as.factor(household_income))
+    
+
+price_by_income <- benjerry |>
+  group_by(income_group) |>
+  summarize(
+    avg_price = mean(priceper1, na.rm = TRUE),
+    n = n()
+  )
+
+
+coupon_by_region <- benjerry |>
+  group_by(region) |>
+  summarize(
+    coupon_rate = mean(used_coupon),
+    count = n()
+  )
+
+ggplot(coupon_by_region, aes(x = reorder(region, -coupon_rate), y = coupon_rate, fill = region)) +
+  geom_col(show.legend = FALSE) +
+  labs(
+    title = "Coupon Usage by Region",
+    subtitle = "Share of Purchases Using a Coupon",
+    x = "Region",
+    y = "Coupon Usage Rate",
+    caption = "Source: Ben & Jerry's Purchase Data"
+  ) +
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +
+  scale_fill_brewer(palette = "Pastel1") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold", color = "#00704A"),
+    axis.title.y = element_text(size = 12)
+  )
+
+```
+
+
+## Amount of Ben & Jerry's purchased for each income group
+```{r}
+
+benjerry <- benjerry |>
+  mutate(household_income = as.numeric(household_income))
+
+purchases_by_income <- benjerry |>
+  count(household_income, name = "purchase_count") |>
+  arrange(household_income)
+
+top_income_group <- purchases_by_income |>
+  filter(purchase_count == max(purchase_count))
+
+ggplot(purchases_by_income, aes(x = factor(household_income), y = purchase_count)) +
+  geom_col(fill = "red") +
+  labs(
+    title = "Ben & Jerry's Purchases by Household Income Group",
+    subtitle = "Total number of purchases per income group",
+    x = "Household Income Group ($)",
+    y = "Number of Purchases",
+    caption = "Source: Ben & Jerry's Purchase Dataset"
+  ) +
+   geom_text(
+    data = top_income_group,
+    aes(label = paste0("Top: ", purchase_count)),
+    vjust = -0.5,
+    color = "black",
+    size = 3.5
+  )+
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold", color = "steelblue"),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.caption = element_text(size = 8, hjust = 0, color = "gray40")
+  )+
+  scale_y_continuous(limits = c(0,6000))
+
+```
+
+# Code for seeing most popular flavors
+```{r}
+
+flavor_counts_top5 <- benjerry |>
+  count(flavor_descr, name = "purchases") |>
+  slice_max(purchases, n = 5) |>
+  mutate(
+    rank = row_number(),
+    label = paste0("#", rank)
+  )
+
+ggplot(flavor_counts_top5, aes(x = "", y = purchases, fill = flavor_descr)) +
+  geom_col(width = 1, color = "white") +
+  geom_text(
+    aes(label = label),
+    position = position_stack(vjust = 0.5),
+    color = "white",
+    size = 6,
+    fontface = "bold"
+  ) +
+  coord_polar(theta = "y") +
+  labs(
+    title = "Top 5 Most Purchased Ben & Jerry’s Flavors",
+    fill = "Flavor"
+  ) +
+  theme_void() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+    legend.position = "right" ) 
+
+```
+
